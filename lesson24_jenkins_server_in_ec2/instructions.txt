@@ -1,12 +1,23 @@
-create an EC2 machine with ssh, http, and Custom TCP with 8080 port open
+Step 1 : create an EC2 machine with ssh, http, and Custom TCP with 8080 port open
 
-then ssh into EC2 machine 
+name : jenkins_server
+Ubuntu 24.04
+t2.micro
+Key : jenkins_secrets 
+12 GB Volume
 
+Step 2 : 
+Then ssh into EC2 machine 
+
+
+Step 3 : 
 sudo su
 
 sudo apt update
 
-sudo apt install default-jdk
+// Install Java for Jenkins to run
+
+sudo apt install default-jdk 
 
 java -version
 
@@ -22,6 +33,4 @@ sudo apt-get install jenkins
 sudo systemctl start jenkins
 
 cat /var/lib/jenkins/secrets/initialAdminPassword
-
-
 
